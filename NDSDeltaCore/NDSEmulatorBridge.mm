@@ -86,7 +86,6 @@ int  RGB_LOW_BITS_MASK;
     if (self)
     {
         _activatedInputs = [NSMutableSet set];
-        [self initWithLanguage:-1];
     }
     
     return self;
@@ -107,18 +106,18 @@ int  RGB_LOW_BITS_MASK;
     
     NDS_Init();
     cur3DCore = 1;
-    NDS_3D_ChangeCore(cur3DCore); //OpenGL
+    NDS_3D_ChangeCore(cur3DCore);
     
     //    LOG("Init sound core\n");
     //    SPU_ChangeSoundCore(SNDCORE_COREAUDIO, DESMUME_SAMPLE_RATE*8/60);
     //
-    static const char* nickname = "iNDS";
+    static const char* nickname = "Delta";
     fw_config.nickname_len = strlen(nickname);
     for(int i = 0 ; i < fw_config.nickname_len ; ++i) {
         fw_config.nickname[i] = nickname[i];
     }
     
-    static const char* message = "iNDS is the best!";
+    static const char* message = "Delta is the best!";
     fw_config.message_len = strlen(message);
     for(int i = 0 ; i < fw_config.message_len ; ++i) {
         fw_config.message[i] = message[i];
@@ -139,10 +138,14 @@ int  RGB_LOW_BITS_MASK;
 
 - (void)startWithGameURL:(NSURL *)URL
 {
+    [self initWithLanguage:-1];
+    
     self.gameURL = URL;
-    if (!NDS_LoadROM(URL.absoluteString.UTF8String)) {
+    if (NDS_LoadROM(URL.relativePath.UTF8String) < 1) {
+        assert(false);
         return;
     }
+    //NDS_Reset();
     
     emulating = 1;
 //    
@@ -189,134 +192,35 @@ int  RGB_LOW_BITS_MASK;
     emulating = 1;
 }
 
+
+void systemDrawScreen();
 - (void)runFrame
 {
-    self.frameReady = NO;
+    NDS_beginProcessingInput();
+    NDS_endProcessingInput();
     
-    while (![self isFrameReady])
+    NDS_exec<false>();
+    //if (soundEnabled) SPU_Emulate_user(true);
+    
+    systemDrawScreen();
+}
+
+u32 systemReadJoypad(int joy)
+{
+    u32 joypad = 0;
+    
+    for (NSNumber *input in [NDSEmulatorBridge sharedBridge].activatedInputs.copy)
     {
-        //NDSSystem.emuMain(NDSSystem.emuCount);
+        joypad |= [input unsignedIntegerValue];
     }
+    
+    return joypad;
 }
 
 #pragma mark - Settings -
 
 - (void)updateGameSettings
 {
-//    NSString *gameID = [NSString stringWithFormat:@"%c%c%c%c", rom[0xac], rom[0xad], rom[0xae], rom[0xaf]];
-//    
-//    NSLog(@"VBA-M: GameID in ROM is: %@", gameID);
-//    
-//    // Set defaults
-//    // Use underscores to prevent shadowing of global variables
-//    BOOL _enableRTC       = NO;
-//    BOOL _enableMirroring = NO;
-//    BOOL _useBIOS         = NO;
-//    int  _cpuSaveType     = 0;
-//    int  _flashSize       = 0x10000;
-//    
-//    // Read in vba-over.ini and break it into an array of strings
-//    NSString *iniPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"vba-over" ofType:@"ini"];
-//    NSString *iniString = [NSString stringWithContentsOfFile:iniPath encoding:NSUTF8StringEncoding error:NULL];
-//    NSArray *settings = [iniString componentsSeparatedByString:@"\n"];
-//    
-//    BOOL matchFound = NO;
-//    NSMutableDictionary *overridesFound = [[NSMutableDictionary alloc] init];
-//    NSString *temp;
-//    
-//    // Check if vba-over.ini has per-game settings for our gameID
-//    for (NSString *s in settings)
-//    {
-//        temp = nil;
-//        
-//        if ([s hasPrefix:@"["])
-//        {
-//            NSScanner *scanner = [NSScanner scannerWithString:s];
-//            [scanner scanString:@"[" intoString:nil];
-//            [scanner scanUpToString:@"]" intoString:&temp];
-//            
-//            if ([temp caseInsensitiveCompare:gameID] == NSOrderedSame)
-//            {
-//                matchFound = YES;
-//            }
-//            
-//            continue;
-//        }
-//        
-//        else if (matchFound && [s hasPrefix:@"saveType="])
-//        {
-//            NSScanner *scanner = [NSScanner scannerWithString:s];
-//            [scanner scanString:@"saveType=" intoString:nil];
-//            [scanner scanUpToString:@"\n" intoString:&temp];
-//            _cpuSaveType = [temp intValue];
-//            [overridesFound setObject:temp forKey:@"CPU saveType"];
-//            
-//            continue;
-//        }
-//        
-//        else if (matchFound && [s hasPrefix:@"rtcEnabled="])
-//        {
-//            NSScanner *scanner = [NSScanner scannerWithString:s];
-//            [scanner scanString:@"rtcEnabled=" intoString:nil];
-//            [scanner scanUpToString:@"\n" intoString:&temp];
-//            _enableRTC = [temp boolValue];
-//            [overridesFound setObject:temp forKey:@"rtcEnabled"];
-//            
-//            continue;
-//        }
-//        
-//        else if (matchFound && [s hasPrefix:@"flashSize="])
-//        {
-//            NSScanner *scanner = [NSScanner scannerWithString:s];
-//            [scanner scanString:@"flashSize=" intoString:nil];
-//            [scanner scanUpToString:@"\n" intoString:&temp];
-//            _flashSize = [temp intValue];
-//            [overridesFound setObject:temp forKey:@"flashSize"];
-//            
-//            continue;
-//        }
-//        
-//        else if (matchFound && [s hasPrefix:@"mirroringEnabled="])
-//        {
-//            NSScanner *scanner = [NSScanner scannerWithString:s];
-//            [scanner scanString:@"mirroringEnabled=" intoString:nil];
-//            [scanner scanUpToString:@"\n" intoString:&temp];
-//            _enableMirroring = [temp boolValue];
-//            [overridesFound setObject:temp forKey:@"mirroringEnabled"];
-//            
-//            continue;
-//        }
-//        
-//        else if (matchFound && [s hasPrefix:@"useBios="])
-//        {
-//            NSScanner *scanner = [NSScanner scannerWithString:s];
-//            [scanner scanString:@"useBios=" intoString:nil];
-//            [scanner scanUpToString:@"\n" intoString:&temp];
-//            _useBIOS = [temp boolValue];
-//            [overridesFound setObject:temp forKey:@"useBios"];
-//            
-//            continue;
-//        }
-//        
-//        else if (matchFound)
-//            break;
-//    }
-//    
-//    if (matchFound)
-//    {
-//        NSLog(@"VBA: overrides found: %@", overridesFound);
-//    }
-//    
-//    // Apply settings
-//    rtcEnable(_enableRTC);
-//    mirroringEnable = _enableMirroring;
-//    doMirroring(mirroringEnable);
-//    cpuSaveType = _cpuSaveType;
-//    
-//    if (_flashSize == 0x10000 || _flashSize == 0x20000)
-//    {
-//        flashSetSize(_flashSize);
-//    }
     
 }
 
@@ -350,49 +254,48 @@ int  RGB_LOW_BITS_MASK;
 
 - (void)saveGameSaveToURL:(NSURL *)URL
 {
-    //NDSSystem.emuWriteBattery(URL.fileSystemRepresentation);
+    
 }
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
-    //NDSSystem.emuReadBattery(URL.fileSystemRepresentation);
+    
 }
 
 #pragma mark - Save States -
 
 - (void)saveSaveStateToURL:(NSURL *)URL
 {
-    //NDSSystem.emuWriteState(URL.fileSystemRepresentation);
+    savestate_save(URL.fileSystemRepresentation);
 }
 
 - (void)loadSaveStateFromURL:(NSURL *)URL
 {
-    //NDSSystem.emuReadState(URL.fileSystemRepresentation);
+    savestate_load(URL.fileSystemRepresentation);
 }
 
 #pragma mark - Cheats -
 
 - (BOOL)addCheatCode:(NSString *)cheatCode type:(NSString *)type
 {
-//    BOOL success = NO;
-//    
-//    if ([type isEqualToString:CheatTypeActionReplay] || [type isEqualToString:CheatTypeGameShark])
-//    {
-//        NSString *sanitizedCode = [cheatCode stringByReplacingOccurrencesOfString:@" " withString:@""];
-//        success = cheatsAddGSACode([sanitizedCode UTF8String], "code", true);
-//    }
-//    else if ([type isEqualToString:CheatTypeCodeBreaker])
-//    {
-//        success = cheatsAddCBACode([cheatCode UTF8String], "code");
-//    }
-//    
-//    return success;
-    return false;
+    BOOL success = NO;
+    
+    if ([type isEqualToString:CheatTypeActionReplay] || [type isEqualToString:CheatTypeGameShark])
+    {
+        NSString *sanitizedCode = [cheatCode stringByReplacingOccurrencesOfString:@" " withString:@""];
+        //success = cheatsAddGSACode([sanitizedCode UTF8String], "code", true);
+    }
+    else if ([type isEqualToString:CheatTypeCodeBreaker])
+    {
+        //success = cheatsAddCBACode([cheatCode UTF8String], "code");
+    }
+    
+    return success;
 }
 
 - (void)resetCheats
 {
-    //cheatsDeleteAll(true);
+    
 }
 
 - (void)updateCheats
@@ -406,23 +309,18 @@ int  RGB_LOW_BITS_MASK;
 
 void systemMessage(int _iId, const char * _csFormat, ...)
 {
-    NSLog(@"VBA-M: %s", _csFormat);
+    NSLog(@"NDS: %s", _csFormat);
 }
 
 void systemDrawScreen()
 {
-//    for (int i = 0; i < 241 * 162 * 4; i++)
-//    {
-//        if ((i + 1) % 4 == 0)
-//        {
-//            pix[i] = 255;
-//        }
-//    }
-//    
-//    // Get rid of the first line and the last row
-//    dispatch_apply(160, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t y){
-//        memcpy([NDSEmulatorBridge sharedBridge].videoRenderer.videoBuffer + y * 240 * 4, pix + (y + 1) * (240 + 1) * 4, 240 * 4);
-//    });
+    
+    u8 *srcBuffer = (u8*)EMU_RBGA8Buffer();
+    
+    dispatch_apply(384, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t y){
+        
+            memcpy([NDSEmulatorBridge sharedBridge].videoRenderer.videoBuffer + y * 256 * 4, srcBuffer + y * 256 * 4, 256 * 4);
+        });
     
     [[NDSEmulatorBridge sharedBridge] setFrameReady:YES];
 }
@@ -430,18 +328,6 @@ void systemDrawScreen()
 bool systemReadJoypads()
 {
     return true;
-}
-
-u32 systemReadJoypad(int joy)
-{
-    u32 joypad = 0;
-    
-    for (NSNumber *input in [NDSEmulatorBridge sharedBridge].activatedInputs.copy)
-    {
-        joypad |= [input unsignedIntegerValue];
-    }
-    
-    return joypad;
 }
 
 void systemShowSpeed(int _iSpeed)
