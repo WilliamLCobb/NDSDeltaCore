@@ -35,7 +35,7 @@ typedef enum {
 
 
 void EMU_init(int lang = -1);
-u32 *EMU_RBGA8Buffer();
+u32 *EMU_ARGB8Buffer();
 void EMU_loadDefaultSettings();
 bool EMU_loadRom(const char* path);
 void EMU_change3D(int type);

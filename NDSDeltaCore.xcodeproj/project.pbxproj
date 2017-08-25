@@ -138,6 +138,7 @@
 		CAF4680E1F4E76E700073C5D /* emu.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF468091F4E76E700073C5D /* emu.h */; };
 		CAF4680F1F4E76E700073C5D /* mic_iOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAF4680A1F4E76E700073C5D /* mic_iOS.cpp */; };
 		CAF468111F4E76E700073C5D /* snd_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF4680C1F4E76E700073C5D /* snd_iOS.h */; };
+		CAF468131F4FC0B000073C5D /* DeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF468121F4FC0B000073C5D /* DeltaCore.framework */; };
 		CAF4D26E1E284BF7000BE522 /* cpu_detect_x86_gcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABAD3E6613AF1D6D00502E1E /* cpu_detect_x86_gcc.cpp */; };
 		CAF4D29C1E29908D000BE522 /* cpu_detect_x86_gcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABAD3E6613AF1D6D00502E1E /* cpu_detect_x86_gcc.cpp */; };
 		CAF4D29F1E29908D000BE522 /* fs-linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABD1FEB21345AC8400AF11D1 /* fs-linux.cpp */; };
@@ -631,6 +632,7 @@
 		CAF4680A1F4E76E700073C5D /* mic_iOS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mic_iOS.cpp; sourceTree = "<group>"; };
 		CAF4680B1F4E76E700073C5D /* snd_iOS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snd_iOS.cpp; sourceTree = "<group>"; };
 		CAF4680C1F4E76E700073C5D /* snd_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snd_iOS.h; sourceTree = "<group>"; };
+		CAF468121F4FC0B000073C5D /* DeltaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeltaCore.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Delta-gbkifpjpueeesoeszrzpkucjlmkq/Build/Products/Release-iphoneos/DeltaCore.framework"; sourceTree = "<group>"; };
 		CAF4D1FD1E21E9A8000BE522 /* ROMS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ROMS; sourceTree = "<group>"; };
 		CAF4D2051E23E68B000BE522 /* iNDSEmulationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iNDSEmulationViewController.h; sourceTree = "<group>"; };
 		CAF4D2061E23E68B000BE522 /* iNDSEmulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iNDSEmulationViewController.m; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF468131F4FC0B000073C5D /* DeltaCore.framework in Frameworks */,
 				CAF467F41F4E40FB00073C5D /* libz.tbd in Frameworks */,
 				CAF467EF1F4E3A3C00073C5D /* DeSmuME.lib in Frameworks */,
 			);
@@ -778,6 +781,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAF468121F4FC0B000073C5D /* DeltaCore.framework */,
 				CAF467F31F4E40FB00073C5D /* libz.tbd */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 			);

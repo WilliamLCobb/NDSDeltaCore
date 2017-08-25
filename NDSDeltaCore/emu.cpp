@@ -85,17 +85,18 @@ void EMU_loadDefaultSettings() {
     //CommonSettings.SPU_sync_method = SPU_SYNC_METHOD_N;
 }
 
-CACHE_ALIGN  u32 RGbA8_Buffer[256*192*2];
+CACHE_ALIGN  u32 ARGB8_Buffer[256*192*2];
 
-u32 *EMU_RBGA8Buffer()
+u32 *EMU_ARGB8Buffer()
 {
     const int size = 192 * 256 * 2;
     
     u16* src = (u16*)GPU_screen;
     for(int i=0;i<size;++i)
-        RGbA8_Buffer[i] = 0xFF000000 | RGB15TO32_NOALPHA(src[i]);
-    return RGbA8_Buffer;
+        ARGB8_Buffer[i] = (RGB15TO32_NOALPHA(src[i]) << 8) | 0xFF;
+    return ARGB8_Buffer;
 }
+
 
 bool EMU_loadRom(const char *filepath) {
     return NDS_LoadROM(filepath) > 0;

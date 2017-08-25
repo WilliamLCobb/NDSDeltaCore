@@ -315,7 +315,8 @@ void systemMessage(int _iId, const char * _csFormat, ...)
 void systemDrawScreen()
 {
     
-    u8 *srcBuffer = (u8*)EMU_RBGA8Buffer();
+    u8 *srcBuffer = (u8*)EMU_ARGB8Buffer();
+    
     
     dispatch_apply(384, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t y){
         
