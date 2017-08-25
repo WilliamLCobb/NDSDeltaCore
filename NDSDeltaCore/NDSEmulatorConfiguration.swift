@@ -23,7 +23,7 @@ public struct NDSEmulatorConfiguration: EmulatorConfiguration
     }
     
     public var videoBufferInfo: VideoManager.BufferInfo {
-        let bufferInfo = VideoManager.BufferInfo(inputFormat: .argb1555, inputDimensions: CGSize(width: 256, height: 384), outputDimensions: CGSize(width: 256, height: 384))
+        let bufferInfo = VideoManager.BufferInfo(inputFormat: .abgr1555, inputDimensions: CGSize(width: 256, height: 384), outputDimensions: CGSize(width: 256, height: 384))
         return bufferInfo
     }
     

@@ -14,7 +14,8 @@
 extern volatile bool execute;
 
 typedef unsigned char u8;
-typedef unsigned int u32;
+typedef uint32_t u32;
+typedef uint16_t u16;
 
 typedef enum {
 	BUTTON_RIGHT = 0,
@@ -35,7 +36,7 @@ typedef enum {
 
 
 void EMU_init(int lang = -1);
-u32 *EMU_ARGB8Buffer();
+u16 *EMU_ABGR1555Buffer();
 void EMU_loadDefaultSettings();
 bool EMU_loadRom(const char* path);
 void EMU_change3D(int type);
