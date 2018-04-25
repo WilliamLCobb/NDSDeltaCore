@@ -55,10 +55,8 @@ void EMU_touchScreenRelease();
 void EMU_setWorkingDir(const char* path);
 void EMU_closeRom();
 
-void EMU_buttonDown(BUTTON_ID button);
-void EMU_buttonUp(BUTTON_ID button);
-void EMU_setDPad(bool up, bool down, bool left, bool right);
-void EMU_setABXY(bool a, bool b, bool x, bool y);
+void EMU_resetButtons();
+void EMU_setButtonAtIndex(int index, bool activated);
 void EMU_setFilter(int filter);
 
 const char *EMU_version();

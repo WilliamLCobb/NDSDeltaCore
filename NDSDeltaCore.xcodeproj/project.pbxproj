@@ -120,18 +120,11 @@
 		CA3ED8C51F4E2BAE00E15413 /* NDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3ED8B51F4E2BAE00E15413 /* NDS.swift */; };
 		CA3ED8C61F4E2BAE00E15413 /* NDSDeltaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3ED8B61F4E2BAE00E15413 /* NDSDeltaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA3ED8C71F4E2BAE00E15413 /* NDSDeltaCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3ED8B71F4E2BAE00E15413 /* NDSDeltaCore.m */; };
-		CA3ED8C81F4E2BAE00E15413 /* NDSEmulatorBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3ED8B81F4E2BAE00E15413 /* NDSEmulatorBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA3ED8C91F4E2BAE00E15413 /* NDSEmulatorBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA3ED8B91F4E2BAE00E15413 /* NDSEmulatorBridge.mm */; };
-		CA3ED8CB1F4E2BAE00E15413 /* NDSInputTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3ED8BB1F4E2BAE00E15413 /* NDSInputTransformer.swift */; };
-		CA3ED8CF1F4E2BAE00E15413 /* NDSSoundDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3ED8BF1F4E2BAE00E15413 /* NDSSoundDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA3ED8D01F4E2BAE00E15413 /* NDSSoundDriver.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA3ED8C01F4E2BAE00E15413 /* NDSSoundDriver.mm */; };
+		CA58110B1F534BA600965B46 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5811081F534BA600965B46 /* info.json */; };
+		CA58110C1F534BA600965B46 /* iphone_landscape.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CA5811091F534BA600965B46 /* iphone_landscape.pdf */; };
+		CA58110F1F53752700965B46 /* Standard.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = CA58110A1F534BA600965B46 /* Standard.deltaskin */; };
 		CAF467EF1F4E3A3C00073C5D /* DeSmuME.lib in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3C6471501BC6D00E0C22E /* DeSmuME.lib */; };
 		CAF467F41F4E40FB00073C5D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF467F31F4E40FB00073C5D /* libz.tbd */; };
-		CAF4680D1F4E76E700073C5D /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAF468081F4E76E700073C5D /* emu.cpp */; };
-		CAF4680E1F4E76E700073C5D /* emu.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF468091F4E76E700073C5D /* emu.h */; };
-		CAF4680F1F4E76E700073C5D /* mic_iOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAF4680A1F4E76E700073C5D /* mic_iOS.cpp */; };
-		CAF468111F4E76E700073C5D /* snd_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF4680C1F4E76E700073C5D /* snd_iOS.h */; };
-		CAF468131F4FC0B000073C5D /* DeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF468121F4FC0B000073C5D /* DeltaCore.framework */; };
 		CAF4D26E1E284BF7000BE522 /* cpu_detect_x86_gcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABAD3E6613AF1D6D00502E1E /* cpu_detect_x86_gcc.cpp */; };
 		CAF4D29C1E29908D000BE522 /* cpu_detect_x86_gcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABAD3E6613AF1D6D00502E1E /* cpu_detect_x86_gcc.cpp */; };
 		CAF4D29F1E29908D000BE522 /* fs-linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABD1FEB21345AC8400AF11D1 /* fs-linux.cpp */; };
@@ -253,6 +246,15 @@
 		CAF4D31A1E2990A9000BE522 /* x86func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB405672169F5DCC0016AC3E /* x86func.cpp */; };
 		CAF4D31B1E2990A9000BE522 /* x86operand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB405674169F5DCC0016AC3E /* x86operand.cpp */; };
 		CAF4D31C1E2990A9000BE522 /* x86util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB405676169F5DCC0016AC3E /* x86util.cpp */; };
+		CAF9F2FB1F51CF69006FCD87 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAF9F2F01F51CF69006FCD87 /* emu.cpp */; };
+		CAF9F2FC1F51CF69006FCD87 /* emu.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF9F2F11F51CF69006FCD87 /* emu.h */; };
+		CAF9F2FD1F51CF69006FCD87 /* mic_iOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAF9F2F21F51CF69006FCD87 /* mic_iOS.cpp */; };
+		CAF9F2FE1F51CF69006FCD87 /* NDSEmulatorBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF9F2F31F51CF69006FCD87 /* NDSEmulatorBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAF9F2FF1F51CF69006FCD87 /* NDSEmulatorBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAF9F2F41F51CF69006FCD87 /* NDSEmulatorBridge.mm */; };
+		CAF9F3001F51CF69006FCD87 /* NDSSoundDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF9F2F51F51CF69006FCD87 /* NDSSoundDriver.h */; };
+		CAF9F3011F51CF69006FCD87 /* NDSSoundDriver.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAF9F2F61F51CF69006FCD87 /* NDSSoundDriver.mm */; };
+		CAF9F3031F51CF69006FCD87 /* snd_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CAF9F2F81F51CF69006FCD87 /* snd_iOS.h */; };
+		CAF9F3041F51CF69006FCD87 /* NDSInputTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9F2FA1F51CF69006FCD87 /* NDSInputTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,7 +272,6 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BA32A8EE0D5EF6BC8425761 /* Pods-DeSmuME_JIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeSmuME_JIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeSmuME_JIT/Pods-DeSmuME_JIT.debug.xcconfig"; sourceTree = "<group>"; };
 		70B3AC8820D52E680ECCDF53 /* Pods-iNDS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNDS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iNDS/Pods-iNDS.release.xcconfig"; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE2B1A1383D1DE96560E8E1 /* Pods-iNDS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNDS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNDS/Pods-iNDS.debug.xcconfig"; sourceTree = "<group>"; };
 		A0933C4E46E4209327550C30 /* Pods-DeSmuME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeSmuME.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeSmuME/Pods-DeSmuME.release.xcconfig"; sourceTree = "<group>"; };
 		AB00E89114205ECC00DE561F /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = translations/English.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -281,7 +282,6 @@
 		AB2EE12B17D57ED500F68622 /* slot1_retail_mcrom_debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slot1_retail_mcrom_debug.cpp; sourceTree = "<group>"; };
 		AB2EE12F17D57F5000F68622 /* fsnitro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fsnitro.h; sourceTree = "<group>"; };
 		AB2EE13017D57F5000F68622 /* fsnitro.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fsnitro.cpp; sourceTree = "<group>"; };
-		AB350D38147A1D8D007165AC /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = English; path = translations/English.lproj/HID_usage_strings.plist; sourceTree = "<group>"; };
 		AB4055ED169F59380016AC3E /* AsmJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsmJit.h; sourceTree = "<group>"; };
 		AB4055EE169F59380016AC3E /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		AB4055EF169F59380016AC3E /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
@@ -399,7 +399,6 @@
 		ABBB421516B4A5F30012E5AB /* OGLRender_3_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OGLRender_3_2.h; path = src/OGLRender_3_2.h; sourceTree = "<group>"; };
 		ABCFA9F2178BDE920030C8BA /* encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encrypt.h; path = src/encrypt.h; sourceTree = "<group>"; };
 		ABCFA9F3178BDE920030C8BA /* encrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = encrypt.cpp; path = src/encrypt.cpp; sourceTree = "<group>"; };
-		ABD104271346653B00AF11D1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABD10452134666DD00AF11D1 /* DeSmuME_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeSmuME_Prefix.pch; sourceTree = "<group>"; };
 		ABD1FE6C1345AC8400AF11D1 /* agg2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = agg2d.h; path = src/agg2d.h; sourceTree = SOURCE_ROOT; };
 		ABD1FE6D1345AC8400AF11D1 /* aggdraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aggdraw.h; path = src/aggdraw.h; sourceTree = SOURCE_ROOT; };
@@ -583,26 +582,27 @@
 		ABFE150514C92FF5005D6699 /* lq2x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lq2x.h; sourceTree = "<group>"; };
 		ABFE150614C92FF5005D6699 /* scanline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scanline.cpp; sourceTree = "<group>"; };
 		CA3ED8A61F4E289300E15413 /* NDSDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDSDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA3ED8A91F4E289300E15413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3ED8B41F4E2BAE00E15413 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3ED8B51F4E2BAE00E15413 /* NDS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDS.swift; sourceTree = "<group>"; };
 		CA3ED8B61F4E2BAE00E15413 /* NDSDeltaCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSDeltaCore.h; sourceTree = "<group>"; };
 		CA3ED8B71F4E2BAE00E15413 /* NDSDeltaCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDSDeltaCore.m; sourceTree = "<group>"; };
-		CA3ED8B81F4E2BAE00E15413 /* NDSEmulatorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSEmulatorBridge.h; sourceTree = "<group>"; };
-		CA3ED8B91F4E2BAE00E15413 /* NDSEmulatorBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSEmulatorBridge.mm; sourceTree = "<group>"; };
-		CA3ED8BB1F4E2BAE00E15413 /* NDSInputTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDSInputTransformer.swift; sourceTree = "<group>"; };
-		CA3ED8BF1F4E2BAE00E15413 /* NDSSoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSSoundDriver.h; sourceTree = "<group>"; };
-		CA3ED8C01F4E2BAE00E15413 /* NDSSoundDriver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSSoundDriver.mm; sourceTree = "<group>"; };
+		CA5811081F534BA600965B46 /* info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
+		CA5811091F534BA600965B46 /* iphone_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_landscape.pdf; sourceTree = "<group>"; };
+		CA58110A1F534BA600965B46 /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = Standard.deltaskin; sourceTree = "<group>"; };
 		CAF467F31F4E40FB00073C5D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
-		CAF468081F4E76E700073C5D /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = emu.cpp; sourceTree = "<group>"; };
-		CAF468091F4E76E700073C5D /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emu.h; sourceTree = "<group>"; };
-		CAF4680A1F4E76E700073C5D /* mic_iOS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mic_iOS.cpp; sourceTree = "<group>"; };
-		CAF4680B1F4E76E700073C5D /* snd_iOS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snd_iOS.cpp; sourceTree = "<group>"; };
-		CAF4680C1F4E76E700073C5D /* snd_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snd_iOS.h; sourceTree = "<group>"; };
 		CAF468121F4FC0B000073C5D /* DeltaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeltaCore.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Delta-gbkifpjpueeesoeszrzpkucjlmkq/Build/Products/Release-iphoneos/DeltaCore.framework"; sourceTree = "<group>"; };
-		CAF4D1FD1E21E9A8000BE522 /* ROMS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ROMS; sourceTree = "<group>"; };
 		CAF4D3111E29908D000BE522 /* DeSmuME_JIT.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = DeSmuME_JIT.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF4D3121E29908D000BE522 /* DeSmuME copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DeSmuME copy-Info.plist"; path = "/Users/willcobb/Dropbox/Xcode/iNDS2/DeSmuME copy-Info.plist"; sourceTree = "<absolute>"; };
+		CAF9F2F01F51CF69006FCD87 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = emu.cpp; sourceTree = "<group>"; };
+		CAF9F2F11F51CF69006FCD87 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emu.h; sourceTree = "<group>"; };
+		CAF9F2F21F51CF69006FCD87 /* mic_iOS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mic_iOS.cpp; sourceTree = "<group>"; };
+		CAF9F2F31F51CF69006FCD87 /* NDSEmulatorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSEmulatorBridge.h; sourceTree = "<group>"; };
+		CAF9F2F41F51CF69006FCD87 /* NDSEmulatorBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSEmulatorBridge.mm; sourceTree = "<group>"; };
+		CAF9F2F51F51CF69006FCD87 /* NDSSoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDSSoundDriver.h; sourceTree = "<group>"; };
+		CAF9F2F61F51CF69006FCD87 /* NDSSoundDriver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NDSSoundDriver.mm; sourceTree = "<group>"; };
+		CAF9F2F71F51CF69006FCD87 /* snd_iOS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snd_iOS.cpp; sourceTree = "<group>"; };
+		CAF9F2F81F51CF69006FCD87 /* snd_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snd_iOS.h; sourceTree = "<group>"; };
+		CAF9F2FA1F51CF69006FCD87 /* NDSInputTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDSInputTransformer.swift; sourceTree = "<group>"; };
 		CC2EE5BF5CB5AA4B7182A70D /* Pods-DeSmuME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeSmuME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeSmuME/Pods-DeSmuME.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -622,7 +622,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF468131F4FC0B000073C5D /* DeltaCore.framework in Frameworks */,
 				CAF467F41F4E40FB00073C5D /* libz.tbd in Frameworks */,
 				CAF467EF1F4E3A3C00073C5D /* DeSmuME.lib in Frameworks */,
 			);
@@ -682,7 +681,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				ABD104271346653B00AF11D1 /* main.m */,
 				ABD10452134666DD00AF11D1 /* DeSmuME_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -691,10 +689,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AB350D3A147A1D93007165AC /* HID_usage_strings.plist */,
-				8D1107310486CEB800E47090 /* Info.plist */,
 				AB901BDD1420706100348EEC /* Localizable.strings */,
-				CAF4D1FD1E21E9A8000BE522 /* ROMS */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1145,19 +1140,45 @@
 				CA3ED8B51F4E2BAE00E15413 /* NDS.swift */,
 				CA3ED8B61F4E2BAE00E15413 /* NDSDeltaCore.h */,
 				CA3ED8B71F4E2BAE00E15413 /* NDSDeltaCore.m */,
-				CA3ED8B81F4E2BAE00E15413 /* NDSEmulatorBridge.h */,
-				CA3ED8B91F4E2BAE00E15413 /* NDSEmulatorBridge.mm */,
-				CA3ED8BB1F4E2BAE00E15413 /* NDSInputTransformer.swift */,
-				CA3ED8BF1F4E2BAE00E15413 /* NDSSoundDriver.h */,
-				CA3ED8C01F4E2BAE00E15413 /* NDSSoundDriver.mm */,
-				CA3ED8A91F4E289300E15413 /* Info.plist */,
-				CAF468081F4E76E700073C5D /* emu.cpp */,
-				CAF468091F4E76E700073C5D /* emu.h */,
-				CAF4680A1F4E76E700073C5D /* mic_iOS.cpp */,
-				CAF4680B1F4E76E700073C5D /* snd_iOS.cpp */,
-				CAF4680C1F4E76E700073C5D /* snd_iOS.h */,
+				CAF9F2EF1F51CF69006FCD87 /* Bridge */,
+				CAF9F2F91F51CF69006FCD87 /* Input */,
+				CA5811071F534BA600965B46 /* Supporting Files */,
 			);
 			path = NDSDeltaCore;
+			sourceTree = "<group>";
+		};
+		CA5811071F534BA600965B46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA5811081F534BA600965B46 /* info.json */,
+				CA5811091F534BA600965B46 /* iphone_landscape.pdf */,
+				CA58110A1F534BA600965B46 /* Standard.deltaskin */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAF9F2EF1F51CF69006FCD87 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				CAF9F2F31F51CF69006FCD87 /* NDSEmulatorBridge.h */,
+				CAF9F2F41F51CF69006FCD87 /* NDSEmulatorBridge.mm */,
+				CAF9F2F51F51CF69006FCD87 /* NDSSoundDriver.h */,
+				CAF9F2F61F51CF69006FCD87 /* NDSSoundDriver.mm */,
+				CAF9F2F01F51CF69006FCD87 /* emu.cpp */,
+				CAF9F2F11F51CF69006FCD87 /* emu.h */,
+				CAF9F2F21F51CF69006FCD87 /* mic_iOS.cpp */,
+				CAF9F2F71F51CF69006FCD87 /* snd_iOS.cpp */,
+				CAF9F2F81F51CF69006FCD87 /* snd_iOS.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		CAF9F2F91F51CF69006FCD87 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				CAF9F2FA1F51CF69006FCD87 /* NDSInputTransformer.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1167,11 +1188,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA3ED8CF1F4E2BAE00E15413 /* NDSSoundDriver.h in Headers */,
-				CAF4680E1F4E76E700073C5D /* emu.h in Headers */,
-				CA3ED8C81F4E2BAE00E15413 /* NDSEmulatorBridge.h in Headers */,
+				CAF9F3001F51CF69006FCD87 /* NDSSoundDriver.h in Headers */,
+				CAF9F2FE1F51CF69006FCD87 /* NDSEmulatorBridge.h in Headers */,
+				CAF9F3031F51CF69006FCD87 /* snd_iOS.h in Headers */,
+				CAF9F2FC1F51CF69006FCD87 /* emu.h in Headers */,
 				CA3ED8C61F4E2BAE00E15413 /* NDSDeltaCore.h in Headers */,
-				CAF468111F4E76E700073C5D /* snd_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,7 +1308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA58110F1F53752700965B46 /* Standard.deltaskin in Resources */,
+				CA58110C1F534BA600965B46 /* iphone_landscape.pdf in Resources */,
 				CA3ED8C41F4E2BAE00E15413 /* Info.plist in Resources */,
+				CA58110B1F534BA600965B46 /* info.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1418,13 +1442,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF4680D1F4E76E700073C5D /* emu.cpp in Sources */,
+				CAF9F3011F51CF69006FCD87 /* NDSSoundDriver.mm in Sources */,
 				CA3ED8C51F4E2BAE00E15413 /* NDS.swift in Sources */,
-				CA3ED8D01F4E2BAE00E15413 /* NDSSoundDriver.mm in Sources */,
 				CA3ED8C71F4E2BAE00E15413 /* NDSDeltaCore.m in Sources */,
-				CA3ED8C91F4E2BAE00E15413 /* NDSEmulatorBridge.mm in Sources */,
-				CAF4680F1F4E76E700073C5D /* mic_iOS.cpp in Sources */,
-				CA3ED8CB1F4E2BAE00E15413 /* NDSInputTransformer.swift in Sources */,
+				CAF9F3041F51CF69006FCD87 /* NDSInputTransformer.swift in Sources */,
+				CAF9F2FF1F51CF69006FCD87 /* NDSEmulatorBridge.mm in Sources */,
+				CAF9F2FD1F51CF69006FCD87 /* mic_iOS.cpp in Sources */,
+				CAF9F2FB1F51CF69006FCD87 /* emu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1562,14 +1586,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AB350D3A147A1D93007165AC /* HID_usage_strings.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB350D38147A1D8D007165AC /* English */,
-			);
-			name = HID_usage_strings.plist;
-			sourceTree = "<group>";
-		};
 		AB901BDD1420706100348EEC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1642,6 +1658,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
@@ -1689,6 +1706,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
@@ -1775,7 +1793,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = CobbWeb.NDSDeltaCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willcobb.NDSDeltaCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1833,7 +1851,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = CobbWeb.NDSDeltaCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willcobb.NDSDeltaCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;

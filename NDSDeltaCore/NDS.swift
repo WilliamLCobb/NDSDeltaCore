@@ -22,7 +22,7 @@ public struct NDS: DeltaCoreProtocol
     
     public let gameType = GameType.nds
     
-    public let bundleIdentifier = "com.rileytestut.NDSDeltaCore"
+    public let bundleIdentifier = "com.willcobb.NDSDeltaCore"
     
     public let gameSaveFileExtension = "sav"
     

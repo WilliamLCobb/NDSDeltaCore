@@ -12,16 +12,20 @@ import DeltaCore
 
 @objc public enum NDSGameInput: Int, Input
 {
-    case up = 64
-    case down = 128
-    case left = 32
-    case right = 16
-    case a = 1
-    case b = 2
-    case l = 512
-    case r = 256
-    case start = 8
-    case select = 4
+    case up = 8
+    case down = 4
+    case left = 2
+    case right = 1
+    case a = 128
+    case b = 64
+    case x = 512
+    case y = 256
+    case l = 1024
+    case r = 2048
+    case start = 32
+    case select = 16
+    case lid = 4096
+    case touch = 8192
 }
 
 public struct NDSInputTransformer: InputTransforming
@@ -34,10 +38,16 @@ public struct NDSInputTransformer: InputTransforming
         
         for key in item.keys
         {
+            print("Key:", key)
             switch key
             {
-            case "dpad":
+            case "touch":
+                let bridge: NDSEmulatorBridge = NDSEmulatorBridge.shared
+                bridge.hack_touchPoint = point
+                print(bridge)
+                inputs.append(NDSGameInput.touch)
                 
+            case "dpad":
                 let topRect = CGRect(x: item.frame.minX, y: item.frame.minY, width: item.frame.width, height: item.frame.height / 3.0)
                 let bottomRect = CGRect(x: item.frame.minX, y: item.frame.maxY - item.frame.height / 3.0, width: item.frame.width, height: item.frame.height / 3.0)
                 let leftRect = CGRect(x: item.frame.minX, y: item.frame.minY, width: item.frame.width / 3.0, height: item.frame.height)
@@ -65,10 +75,13 @@ public struct NDSInputTransformer: InputTransforming
                 
             case "a": inputs.append(NDSGameInput.a)
             case "b": inputs.append(NDSGameInput.b)
+            case "x": inputs.append(NDSGameInput.x)
+            case "y": inputs.append(NDSGameInput.y)
             case "l": inputs.append(NDSGameInput.l)
             case "r": inputs.append(NDSGameInput.r)
             case "start": inputs.append(NDSGameInput.start)
             case "select": inputs.append(NDSGameInput.select)
+            case "lid": inputs.append(NDSGameInput.lid)
             case "menu": inputs.append(ControllerInput.menu)
             default: break
             }
@@ -88,8 +101,8 @@ public struct NDSInputTransformer: InputTransforming
         case .rightThumbstick(xAxis: _, yAxis: _): break
         case .a: inputs.append(NDSGameInput.a)
         case .b: inputs.append(NDSGameInput.b)
-        case .x: inputs.append(NDSGameInput.select)
-        case .y: inputs.append(NDSGameInput.start)
+        case .x: inputs.append(NDSGameInput.x)
+        case .y: inputs.append(NDSGameInput.y)
         case .l: inputs.append(NDSGameInput.l)
         case .r: inputs.append(NDSGameInput.r)
         case .leftTrigger: inputs.append(NDSGameInput.l)

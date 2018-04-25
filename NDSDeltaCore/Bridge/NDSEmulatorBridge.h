@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (class, nonatomic, readonly) NDSEmulatorBridge *sharedBridge;
 
+@property (nonatomic) CGPoint HACK_touchPoint;
+
 @end
 
 NS_ASSUME_NONNULL_END
